@@ -12,6 +12,14 @@
 		4B8996D11D545F8500A139E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996CF1D545F8500A139E7 /* Main.storyboard */; };
 		4B8996D31D545F8500A139E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996D21D545F8500A139E7 /* Assets.xcassets */; };
 		4B8996D61D545F8500A139E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996D41D545F8500A139E7 /* LaunchScreen.storyboard */; };
+		4B8996DE1D54637000A139E7 /* ChannelInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996DD1D54637000A139E7 /* ChannelInfo.swift */; };
+		4B8996E01D54664500A139E7 /* ProgramInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996DF1D54664500A139E7 /* ProgramInfo.swift */; };
+		4B8996E21D546CE800A139E7 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996E11D546CE800A139E7 /* AVPlayerView.swift */; };
+		4B8996E71D54771600A139E7 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996E61D54771600A139E7 /* MainViewController.swift */; };
+		4B8996E91D547A5600A139E7 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996E81D547A5600A139E7 /* TVViewController.swift */; };
+		4B8996EB1D547A6200A139E7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996EA1D547A6200A139E7 /* ListViewController.swift */; };
+		4B8996ED1D547AB200A139E7 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996EC1D547AB200A139E7 /* TimeLineViewController.swift */; };
+		975AD933078BDB37323FE390 /* Pods_ChannelCutMonster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4E8F37B6CEC92E2D03B28E /* Pods_ChannelCutMonster.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +30,16 @@
 		4B8996D21D545F8500A139E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B8996D51D545F8500A139E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4B8996D71D545F8500A139E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B8996DD1D54637000A139E7 /* ChannelInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelInfo.swift; sourceTree = "<group>"; };
+		4B8996DF1D54664500A139E7 /* ProgramInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgramInfo.swift; sourceTree = "<group>"; };
+		4B8996E11D546CE800A139E7 /* AVPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
+		4B8996E61D54771600A139E7 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		4B8996E81D547A5600A139E7 /* TVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
+		4B8996EA1D547A6200A139E7 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		4B8996EC1D547AB200A139E7 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		8B4E8F37B6CEC92E2D03B28E /* Pods_ChannelCutMonster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChannelCutMonster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9ABCE17A9A6243C9831AC1D6 /* Pods-ChannelCutMonster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChannelCutMonster.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChannelCutMonster/Pods-ChannelCutMonster.release.xcconfig"; sourceTree = "<group>"; };
+		B78E12C79145D906F992445C /* Pods-ChannelCutMonster.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChannelCutMonster.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ChannelCutMonster/Pods-ChannelCutMonster.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				975AD933078BDB37323FE390 /* Pods_ChannelCutMonster.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +59,8 @@
 			children = (
 				4B8996CA1D545F8500A139E7 /* ChannelCutMonster */,
 				4B8996C91D545F8500A139E7 /* Products */,
+				6EB41501FBC0CE36BBE7763E /* Pods */,
+				79291229630C7970858D9272 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -55,13 +76,61 @@
 			isa = PBXGroup;
 			children = (
 				4B8996CB1D545F8500A139E7 /* AppDelegate.swift */,
-				4B8996CD1D545F8500A139E7 /* ViewController.swift */,
+				4B8996E51D5476B600A139E7 /* CustomViews */,
+				4B8996E41D54768D00A139E7 /* Models */,
+				4B8996E31D54767200A139E7 /* Controllers */,
 				4B8996CF1D545F8500A139E7 /* Main.storyboard */,
 				4B8996D21D545F8500A139E7 /* Assets.xcassets */,
 				4B8996D41D545F8500A139E7 /* LaunchScreen.storyboard */,
 				4B8996D71D545F8500A139E7 /* Info.plist */,
 			);
 			path = ChannelCutMonster;
+			sourceTree = "<group>";
+		};
+		4B8996E31D54767200A139E7 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				4B8996CD1D545F8500A139E7 /* ViewController.swift */,
+				4B8996E61D54771600A139E7 /* MainViewController.swift */,
+				4B8996E81D547A5600A139E7 /* TVViewController.swift */,
+				4B8996EA1D547A6200A139E7 /* ListViewController.swift */,
+				4B8996EC1D547AB200A139E7 /* TimeLineViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		4B8996E41D54768D00A139E7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4B8996DD1D54637000A139E7 /* ChannelInfo.swift */,
+				4B8996DF1D54664500A139E7 /* ProgramInfo.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		4B8996E51D5476B600A139E7 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				4B8996E11D546CE800A139E7 /* AVPlayerView.swift */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
+		6EB41501FBC0CE36BBE7763E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B78E12C79145D906F992445C /* Pods-ChannelCutMonster.debug.xcconfig */,
+				9ABCE17A9A6243C9831AC1D6 /* Pods-ChannelCutMonster.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		79291229630C7970858D9272 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8B4E8F37B6CEC92E2D03B28E /* Pods_ChannelCutMonster.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +140,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B8996DA1D545F8500A139E7 /* Build configuration list for PBXNativeTarget "ChannelCutMonster" */;
 			buildPhases = (
+				2F58D3B021DEFDEE045EEE65 /* [CP] Check Pods Manifest.lock */,
 				4B8996C41D545F8500A139E7 /* Sources */,
 				4B8996C51D545F8500A139E7 /* Frameworks */,
 				4B8996C61D545F8500A139E7 /* Resources */,
+				889D9F5CEEEE7DBC14CBFBB6 /* [CP] Embed Pods Frameworks */,
+				6D530354726FCD540CE846FE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -96,6 +168,7 @@
 				TargetAttributes = {
 					4B8996C71D545F8500A139E7 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = WQ89SDXZJ7;
 					};
 				};
 			};
@@ -130,13 +203,68 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2F58D3B021DEFDEE045EEE65 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		6D530354726FCD540CE846FE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChannelCutMonster/Pods-ChannelCutMonster-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		889D9F5CEEEE7DBC14CBFBB6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ChannelCutMonster/Pods-ChannelCutMonster-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		4B8996C41D545F8500A139E7 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B8996E91D547A5600A139E7 /* TVViewController.swift in Sources */,
+				4B8996E01D54664500A139E7 /* ProgramInfo.swift in Sources */,
 				4B8996CE1D545F8500A139E7 /* ViewController.swift in Sources */,
+				4B8996DE1D54637000A139E7 /* ChannelInfo.swift in Sources */,
+				4B8996E71D54771600A139E7 /* MainViewController.swift in Sources */,
 				4B8996CC1D545F8500A139E7 /* AppDelegate.swift in Sources */,
+				4B8996EB1D547A6200A139E7 /* ListViewController.swift in Sources */,
+				4B8996E21D546CE800A139E7 /* AVPlayerView.swift in Sources */,
+				4B8996ED1D547AB200A139E7 /* TimeLineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,23 +375,31 @@
 		};
 		4B8996DB1D545F8500A139E7 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B78E12C79145D906F992445C /* Pods-ChannelCutMonster.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChannelCutMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuma.ChannelCutMonster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
 		4B8996DC1D545F8500A139E7 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9ABCE17A9A6243C9831AC1D6 /* Pods-ChannelCutMonster.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = ChannelCutMonster/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yuma.ChannelCutMonster;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -286,6 +422,7 @@
 				4B8996DC1D545F8500A139E7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
