@@ -13,13 +13,13 @@ class ProgramInfo {
     
     var programName : String?
     var programDetail : String?
-    var programThumb : UIImage?
+    var programThumb : NSURL?
     var programMovie : String?
     var programStartTime : String?
     var programEndTime : String?
     
     //コンストラクタ
-    init(_name : String, _detail : String, _Thumb : UIImage, _movie : String){
+    init(_name : String, _detail : String, _Thumb : NSURL, _movie : String){
         self.programName = _name
         self.programDetail = _detail
         self.programThumb = _Thumb

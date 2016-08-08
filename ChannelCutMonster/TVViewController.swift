@@ -33,13 +33,23 @@ class TVViewController: UIViewController {
     var videoTimeObserver: AnyObject? = nil
     
     
+    //タイマー
+    var timer = NSTimer()
+    var countNum = 0
+    var currentVideoTime:Float64 = 0
+    
+    
     var result: [[String]] = []//Programsの配列
+    
+    
+    var currentVideoName : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        setVideo("news1");
-        play()
+        currentVideoName = "news1"
+        setVideo(currentVideoName);
+        play(currentVideoTime)
         manageTagValue()
     }
     
@@ -58,6 +68,17 @@ class TVViewController: UIViewController {
     }
     
     
+    //画面遷移の際の値渡し
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "goAddViewSegue" {
+            pause()
+            let addChannelViewController : AddChannelViewController = segue.destinationViewController as! AddChannelViewController
+            addChannelViewController.currentVideoTime = self.currentVideoTime
+            addChannelViewController.currentVideoName = self.currentVideoName
+        }
+    }
+    
+    
     func setVideo(f_name : String) -> Void {
         let path = NSBundle.mainBundle().pathForResource(f_name, ofType: "mp4")
         let fileURL = NSURL(fileURLWithPath: path!)
@@ -72,12 +93,19 @@ class TVViewController: UIViewController {
     }
     
     
-    func play() {
+    func play(seekTime: Float64) {
+        self.videoPlayer!.seekToTime(CMTimeMakeWithSeconds(currentVideoTime,Int32(NSEC_PER_SEC)), toleranceBefore: kCMTimeZero, toleranceAfter: kCMTimeZero)
         self.videoPlayer!.play()
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: #selector(TVViewController.update), userInfo: nil, repeats: true)
     }
     
     func pause()  {
         self.videoPlayer!.pause()
+        timer.invalidate()
+    }
+    
+    func reset() {
+        countNum  = 0
     }
     
     
@@ -91,13 +119,31 @@ class TVViewController: UIViewController {
     }
     
     
-    @IBAction func addChannel(sender: UIButton) {
-        pause()
-        print(self.videoPlayer!.currentTime())
-        let addView = AddChannelViewController()
-        addView.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-        self.presentViewController(addView, animated: true, completion: nil)
+    //AddChannelViewから戻ってきた時の処理
+    @IBAction func backFromAddChannelView(segue:UIStoryboardSegue){
+        let addChannelViewController : AddChannelViewController = segue.sourceViewController as! AddChannelViewController
+        addChannelViewController.pause()
+        self.currentVideoTime = addChannelViewController.currentVideoTime
+        self.currentVideoName = addChannelViewController.currentVideoName
+        play(currentVideoTime)
     }
+    
+    
+    func update() {
+        countNum += 1
+        currentVideoTime = CMTimeGetSeconds(videoPlayer!.currentTime())
+//        print(currentVideoTime)
+    }
+    
+    
+//    @IBAction func addChannel(sender: UIButton) {
+//        pause()
+//        print(self.videoPlayer!.currentTime())
+//        let next: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("AddChannelViewController") as UIViewController
+////        let addView = AddChannelViewController()
+//        next.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
+//        self.presentViewController(next, animated: true, completion: nil)
+//    }
     
     
     

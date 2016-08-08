@@ -12,12 +12,12 @@ import UIKit
 class ChannelInfo {
     var channelId : Int?
     var channelName : String?
-    var channelThumb : UIImage?
+    var channelThumb : String?
     var channelDetail : String?
     var programs = [ProgramInfo]()
     
     //コンストラクタ
-    init(_name : String, _thumb: UIImage, _detail:String) {
+    init(_name : String, _thumb: String, _detail:String) {
         self.channelName = _name
         self.channelThumb = _thumb
         self.channelDetail = _detail
@@ -48,7 +48,7 @@ class ChannelInfo {
         }
     }
     
-    var thumb : UIImage {
+    var thumb : String {
         get{
             return channelThumb!
         }
