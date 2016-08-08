@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xvZ-NM-V6U">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="qzH-IP-qR6">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -35,12 +35,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-600" y="-175"/>
+            <point key="canvasLocation" x="-408" y="-519"/>
         </scene>
-        <!--Item-->
+        <!--TimeLineViewController-->
         <scene sceneID="s0k-ZE-ZCX">
             <objects>
-                <viewController id="7Iv-Gq-YTE" customClass="TimeLineViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TimeLineViewController" title="TimeLineViewController" id="7Iv-Gq-YTE" customClass="TimeLineViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="fbM-eA-zVf"/>
                         <viewControllerLayoutGuide type="bottom" id="NvN-vq-TYO"/>
@@ -56,12 +56,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P9e-k2-aBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920" y="526"/>
+            <point key="canvasLocation" x="-50" y="-123"/>
         </scene>
-        <!--Item 2-->
+        <!--ListViewController-->
         <scene sceneID="Smj-3u-mjV">
             <objects>
-                <viewController id="g4A-Iy-hXm" customClass="ListViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ListViewController" title="ListViewController" id="g4A-Iy-hXm" customClass="ListViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Nmh-uw-Vfs"/>
                         <viewControllerLayoutGuide type="bottom" id="My5-9A-nAg"/>
@@ -78,12 +78,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cyG-xr-tqb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="914" y="-175"/>
+            <point key="canvasLocation" x="314" y="-111"/>
         </scene>
-        <!--Item 1-->
+        <!--TVViewController-->
         <scene sceneID="gis-9D-yuL">
             <objects>
-                <viewController id="qzH-IP-qR6" customClass="TVViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TVViewController" title="TVViewController" id="qzH-IP-qR6" customClass="TVViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="URE-dH-Xjs"/>
                         <viewControllerLayoutGuide type="bottom" id="Xjc-VX-cwf"/>
@@ -91,38 +91,135 @@
                     <view key="view" contentMode="scaleToFill" id="Cjk-r5-kWj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.84999999999999998" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="mHv-1l-9ft">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view alpha="0.84999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7P6-6E-SvU">
+                                <rect key="frame" x="40" y="33" width="241" height="28"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shortcut_icon-02.png" translatesAutoresizingMaskIntoConstraints="NO" id="BXR-Ok-sof">
+                                        <rect key="frame" x="8" y="4" width="19" height="19"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ニュースゼロ　スポーツ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fcn-L6-0gI">
+                                        <rect key="frame" x="118" y="-1" width="115" height="28"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="16:00-19:00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ObX-l2-kb4">
+                                        <rect key="frame" x="51" y="4" width="50" height="19"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="7"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.80000000000000004" contentMode="scaleToFill" fixedFrame="YES" text="各番組の隙間時間に、平日の様々なジャンルのニュースをお届けしています。公式サイトからまとめて見ることもできます。アナウンサー：田中一郎" translatesAutoresizingMaskIntoConstraints="NO" id="QVB-WR-CGb">
+                                <rect key="frame" x="41" y="76" width="240" height="76"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                </accessibility>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="9"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RtO-89-Ki8" customClass="AVPlayerView" customModule="ChannelCutMonster" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="169" width="321" height="185"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view alpha="0.59999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTo-VH-ZND">
+                                <rect key="frame" x="-1" y="354" width="321" height="214"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoY-8H-z7k">
+                                        <rect key="frame" x="124" y="20" width="31" height="31"/>
+                                        <state key="normal" backgroundImage="channelPlusButton.png"/>
+                                        <connections>
+                                            <action selector="addChannel:" destination="qzH-IP-qR6" eventType="touchUpInside" id="jpO-mr-ZyS"/>
+                                            <segue destination="mc4-1Q-nHa" kind="presentation" id="KxL-pa-GPL"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ysJ-bA-yoj">
+                                        <rect key="frame" x="171" y="18" width="35" height="35"/>
+                                        <state key="normal" backgroundImage="settingButton.png"/>
+                                        <connections>
+                                            <action selector="setting:" destination="qzH-IP-qR6" eventType="touchUpInside" id="jFJ-ec-DLy"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Item 1" id="ocV-n5-m48"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="TVView" destination="RtO-89-Ki8" id="zP3-z9-qFL"/>
+                        <outlet property="addChannelButton" destination="zoY-8H-z7k" id="YbC-jl-J3D"/>
+                        <outlet property="backgroundImage" destination="mHv-1l-9ft" id="IPR-6a-JsQ"/>
+                        <outlet property="channelDetailView" destination="QVB-WR-CGb" id="b7E-pm-o8D"/>
+                        <outlet property="channelThumb" destination="BXR-Ok-sof" id="LFC-8U-lM5"/>
+                        <outlet property="programTimeLabel" destination="ObX-l2-kb4" id="jEn-ga-9JU"/>
+                        <outlet property="programTitleLabel" destination="fcn-L6-0gI" id="m5F-sb-uv5"/>
+                        <outlet property="settingButton" destination="ysJ-bA-yoj" id="6GK-w1-4Pm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TR0-M1-xPG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="908" y="-821"/>
+            <point key="canvasLocation" x="308" y="-743"/>
         </scene>
-        <!--Main View Controller-->
-        <scene sceneID="vDW-ss-Yrb">
+        <!--AddChannelViewController-->
+        <scene sceneID="r6E-5g-GCU">
             <objects>
-                <tabBarController id="xvZ-NM-V6U" customClass="MainViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
-                    <nil key="simulatedBottomBarMetrics"/>
-                    <simulatedOrientationMetrics key="simulatedOrientationMetrics"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lpv-97-Y92" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="Main" title="AddChannelViewController" id="mc4-1Q-nHa" customClass="AddChannelViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ANb-rb-AdY"/>
+                        <viewControllerLayoutGuide type="bottom" id="p4p-5J-3DG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zdJ-Mz-wVx">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="ld8-JM-3FM">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <view alpha="0.34999999999999998" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ow7-QT-LbY">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-9V-UKF">
+                                        <rect key="frame" x="145" y="408" width="30" height="30"/>
+                                        <state key="normal" backgroundImage="settingButton.png"/>
+                                        <connections>
+                                            <action selector="backTVView:" destination="mc4-1Q-nHa" eventType="touchUpInside" id="r8h-eu-3n1"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm0-Es-qaY" customClass="AVPlayerView" customModule="ChannelCutMonster" customModuleProvider="target">
+                                        <rect key="frame" x="67" y="454" width="186" height="106"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" id="hLS-dd-qKq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                    </tabBar>
                     <connections>
-                        <segue destination="qzH-IP-qR6" kind="relationship" relationship="viewControllers" id="9ca-0K-2Cq"/>
-                        <segue destination="g4A-Iy-hXm" kind="relationship" relationship="viewControllers" id="zUj-Ej-ZA2"/>
-                        <segue destination="7Iv-Gq-YTE" kind="relationship" relationship="viewControllers" id="L8L-BT-dU4"/>
+                        <outlet property="TVView" destination="hm0-Es-qaY" id="79K-ge-TyY"/>
                     </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zYh-Ls-Omx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                </viewController>
             </objects>
-            <point key="canvasLocation" x="38" y="-175"/>
+            <point key="canvasLocation" x="833" y="-734"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="background.jpg" width="1920" height="1080"/>
+        <image name="channelPlusButton.png" width="405" height="405"/>
+        <image name="settingButton.png" width="50" height="50"/>
+        <image name="shortcut_icon-02.png" width="417" height="417"/>
+    </resources>
 </document>
