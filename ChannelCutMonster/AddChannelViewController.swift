@@ -29,7 +29,7 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
     
     
     var channels : [ChannelInfo] = [ChannelInfo]()
-    
+    var selectedChannel : ChannelInfo? = nil
     
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)!
@@ -123,7 +123,7 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
         var count : Int = 0
         while isFinished == false {
             if let value : AnyObject = infoList?.objectForKey(String(count)){
-                let id : Int = value.objectForKey("id") as! Int
+//                let id : Int = value.objectForKey("id") as! Int
                 let name : String = value.objectForKey("name") as! String
                 let imgName : String = value.objectForKey("thumb") as! String
                 let detail : String = value.objectForKey("detail") as! String
@@ -153,6 +153,40 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return channels.count
     }
+    
+    func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
+        selectedChannel = channels[indexPath.row]
+        performSegueWithIdentifier("FromAddChannelToTVView", sender: nil)
+    }
+    
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "FromAddChannelToTVView") {
+            pause()
+            let tvViewController : TVViewController = segue.destinationViewController as! TVViewController
+            tvViewController.currentVideoTime = self.currentVideoTime
+            tvViewController.currentVideoName = self.currentVideoName
+            if selectedChannel != nil  {
+                let defaults = NSUserDefaults.standardUserDefaults()
+                if let favChannelNum = defaults.objectForKey("favnum") as? Int {
+                    let sendData : NSData = NSKeyedArchiver.archivedDataWithRootObject(selectedChannel!)
+                    NSUserDefaults.standardUserDefaults().setObject(sendData as AnyObject, forKey: String(favChannelNum+1))
+                    NSUserDefaults.standardUserDefaults().synchronize()
+                    defaults.setObject(favChannelNum+1, forKey: "favnum")
+                    defaults.synchronize()
+                } else {
+                    defaults.setObject(1, forKey:"favnum")
+                    defaults.synchronize()
+                    let sendData : NSData = NSKeyedArchiver.archivedDataWithRootObject(selectedChannel!)
+                    NSUserDefaults.standardUserDefaults().setObject(sendData as AnyObject, forKey: String(1))
+                    NSUserDefaults.standardUserDefaults().synchronize()
+                }
+//                tvViewController.favoriteChannels.append(selectedChannel!)
+                tvViewController.nowSelectedChannel = selectedChannel!
+            }
+        }
+    }
+    
     
     
     @IBAction func backTVView(sender: AnyObject) {

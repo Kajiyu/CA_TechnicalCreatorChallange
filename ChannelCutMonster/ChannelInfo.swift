@@ -9,8 +9,8 @@
 import UIKit
 
 
-class ChannelInfo {
-    var channelId : Int?
+class ChannelInfo : NSObject,NSCoding {
+    var channelId : Int = 0
     var channelName : String?
     var channelThumb : String?
     var channelDetail : String?
@@ -28,11 +28,26 @@ class ChannelInfo {
     deinit {
     }
     
+    //シリアライズ
+    func encodeWithCoder(aCoder: NSCoder) {
+        aCoder.encodeObject(channelId, forKey: "id")
+        aCoder.encodeObject(channelName, forKey: "name")
+        aCoder.encodeObject(channelThumb, forKey:  "thumb")
+        aCoder.encodeObject(channelDetail, forKey: "detail")
+    }
+    
+    //デシリアライズ
+    required init(coder: NSCoder) {
+        self.channelId = coder.decodeObjectForKey("id") as! Int
+        self.channelName = coder.decodeObjectForKey("name") as! String
+        self.channelThumb = coder.decodeObjectForKey("thumb") as! String
+        self.channelDetail = coder.decodeObjectForKey("detail") as! String
+    }
     
     ////////////////
     var id : Int {
         get{
-            return self.channelId!
+            return self.channelId
         }
         set(p) {
             self.channelId = p
