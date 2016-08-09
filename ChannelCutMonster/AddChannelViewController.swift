@@ -64,6 +64,7 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
     }
     
     
+    
     func setVideo(f_name : String) -> Void {
         let path = NSBundle.mainBundle().pathForResource(f_name, ofType: "mp4")
         let fileURL = NSURL(fileURLWithPath: path!)
@@ -110,12 +111,6 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
     }
     
     func initPrograms() {
-//        let dammy1 = ChannelInfo(_name: "DisneyChannel", _thumb: NSURL(string: "http://oddjob.jp/news/img/TVKfes.jpg")!, _detail: "dddddd")
-//        let dammy2 = ChannelInfo(_name: "ddadag", _thumb: NSURL(string: "http://logostock.jp/logostock/images/sakenomy.png.pagespeed.ce.QY_ReiI54J.png")!, _detail: "lsdcksdco")
-//        let dammy3 = ChannelInfo(_name: "ddadag", _thumb: NSURL(string: "http://contents.oricon.co.jp/upimg/news/20150212/2048490_201502120742899001423684845c.jpg")!, _detail: "lsdcksdco")
-//        channels.append(dammy1)
-//        channels.append(dammy2)
-//        channels.append(dammy3)
         let filePath = NSBundle.mainBundle().pathForResource("channels.plist", ofType: nil)
         let infoList = NSMutableDictionary(contentsOfFile: filePath!)
     
@@ -127,8 +122,9 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
                 let name : String = value.objectForKey("name") as! String
                 let imgName : String = value.objectForKey("thumb") as! String
                 let detail : String = value.objectForKey("detail") as! String
-                
+                let movie : String = value.objectForKey("movie") as! String
                 let tmp_channel = ChannelInfo(_name: name, _thumb: imgName, _detail: detail)
+                tmp_channel.channelMovie = movie
                 channels.append(tmp_channel)
                 count += 1
             } else {

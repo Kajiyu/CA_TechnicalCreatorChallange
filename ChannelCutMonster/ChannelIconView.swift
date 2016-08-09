@@ -23,6 +23,5 @@ class ChannelIconView: UIView {
     
     override func drawRect(rect: CGRect) {
         // Drawing code
-        
     }
 }

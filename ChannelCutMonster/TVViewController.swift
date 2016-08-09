@@ -45,14 +45,14 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     
     
     //var result: [[String]] = []//Programsの配列
-    var icons: [UIView] = []
+    var icons: [ChannelIconView] = []
     
     var currentVideoName : String = ""
     
     
     var favoriteChannels : [ChannelInfo] = [ChannelInfo]()
     var nowSelectedChannel : ChannelInfo? = nil
-    
+    var Channels = ChannelManager.sharedManager
     
     let motionManager = CMMotionManager()
     
@@ -61,104 +61,50 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        currentVideoName = "news1"
+        if currentVideoName == "" {
+            currentVideoName = "news1"
+        } else {
+        }
         setVideo(currentVideoName);
         play(currentVideoTime)
         createShortCutIcon()
         manageTagValue()
         
         
-        /////加速度処理//////
-        motionManager.accelerometerUpdateInterval = 0.1
-        let accelerometerHandler:CMAccelerometerHandler = {
-            (data: CMAccelerometerData?, error: NSError?) -> Void in
+        ////傾き処理///
+//        motionManager.accelerometerUpdateInterval = 0.1
+        motionManager.deviceMotionUpdateInterval = 0.3
+        motionManager.startDeviceMotionUpdatesToQueue( NSOperationQueue.currentQueue()!, withHandler:{
+            deviceManager, error in
             
-            let accelx = data!.acceleration.x
-            let accelz = data!.acceleration.y
-            
-            let ikiti = sqrt(accelx*accelx + accelz*accelz)
-//            print("x: \(ikiti)")
-            
-            if ikiti > 5.0 {
+            var attitude: CMAttitude = deviceManager!.attitude
+            if attitude.roll*10 < -6 {
                 self.performSegueWithIdentifier("fromTVtoList",sender: nil)
+                self.motionManager.stopDeviceMotionUpdates()
             }
-            // 取得した値をコンソールに表示
-            //            print("x: \(data!.acceleration.x)")
-        }
-        motionManager.startAccelerometerUpdatesToQueue(NSOperationQueue.currentQueue()!, withHandler: accelerometerHandler)
+        })
         ///////////////////
+    }
+    
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(true)
+        motionManager.deviceMotionUpdateInterval = 0.3
+        motionManager.startDeviceMotionUpdatesToQueue( NSOperationQueue.currentQueue()!, withHandler:{
+            deviceManager, error in
+            
+            var attitude: CMAttitude = deviceManager!.attitude
+            if attitude.roll*10 < -6 {
+                self.performSegueWithIdentifier("fromTVtoList",sender: nil)
+                self.motionManager.stopDeviceMotionUpdates()
+            }
+        })
+        play(currentVideoTime)
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-//    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-////        if let touch = touches.first as UITouch? {
-////            let tag = touch.view!.tag
-////            if tag == 1 {
-////                startPoint = touch.locationInView(self.view)
-////                imageBeHereNowPoint = touch.view!.frame.origin
-////            }
-////        }
-////        let touch = touches.first as! UITouch
-////            let tag = touch.view!.tag
-////            if tag == 1 {
-////                startPoint = touch.locationInView(self.view)
-////                imageBeHereNowPoint = touch.view!.frame.origin
-////            }
-//         print(touches.first!.view?.tag)
-//    }
-    
-    
-//    override func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//        // タッチイベントを取得
-//        let touchEvent = touches.first!
-//        if touchEvent.view!.tag == 1 {
-//            // ドラッグ前の座標, Swift 1.2 から
-//            let preDx = touchEvent.previousLocationInView(self.view).x
-//            let preDy = touchEvent.previousLocationInView(self.view).y
-//            
-//            // ドラッグ後の座標
-//            let newDx = touchEvent.locationInView(self.view).x
-//            let newDy = touchEvent.locationInView(self.view).y
-//            
-//            // ドラッグしたx座標の移動距離
-//            let dx = newDx - preDx
-//            print("x:\(dx)")
-//            
-//            // ドラッグしたy座標の移動距離
-//            let dy = newDy - preDy
-//            print("y:\(dy)")
-//            
-//            // 画像のフレーム
-//            var viewFrame: CGRect = touchEvent.view!.frame
-//            
-//            // 移動分を反映させる
-//            viewFrame.origin.x += dx
-//            viewFrame.origin.y += dy
-//            
-//            touchEvent.view!.frame = viewFrame
-//            
-////            self.view.addSubview(touchEvent.view!)
-//        }
-////        for touch: UITouch in touches {
-////            let tag = touch.view!.tag
-////                if tag == 1 {
-////                    let location: CGPoint = touch.locationInView(self.view)
-////                    let deltaX: CGFloat = CGFloat(location.x - startPoint!.x)
-////                    let deltaY: CGFloat = CGFloat(location.y - startPoint!.y)
-////                    touch.view!.frame.origin.x = imageBeHereNowPoint!.x + deltaX
-////                    touch.view!.frame.origin.y = imageBeHereNowPoint!.y + deltaY
-////                }
-////        }
-//    }
-    
-    
-//    override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-//         print("End")
-//    }
     
     
     //画面遷移の際の値渡し
@@ -173,7 +119,7 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         if segue.identifier == "fromTVtoList" {
             pause()
             let listViewController : ListViewController = segue.destinationViewController as! ListViewController
-//            listViewController.currentVideoTime = 
+            listViewController.currentVideoName = self.currentVideoName
         }
     }
     
@@ -211,9 +157,9 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     //viewのtagはここで管理
     func manageTagValue() -> Void {
         var index : Int = 0
-        for icon in icons {
-            icon.tag = 1
-        }
+//        for icon in icons {
+//            icon.tag = 1
+//        }
     }
     
     @IBAction func setting(sender: UIButton) {
@@ -236,16 +182,6 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
 //        print(currentVideoTime)
     }
     
-    
-//    @IBAction func addChannel(sender: UIButton) {
-//        pause()
-//        print(self.videoPlayer!.currentTime())
-//        let next: UIViewController = storyboard!.instantiateViewControllerWithIdentifier("AddChannelViewController") as UIViewController
-////        let addView = AddChannelViewController()
-//        next.modalTransitionStyle = UIModalTransitionStyle.CrossDissolve
-//        self.presentViewController(next, animated: true, completion: nil)
-//    }
-    
     var index : Int = 0
     func createShortCutIcon() -> Void {
         let defaults = NSUserDefaults.standardUserDefaults()
@@ -267,18 +203,16 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
 //            let width:CGFloat = 30
 ////            let height:CGFloat = 30
 //            let frame:CGRect = CGRect(x: x, y: y, width: width, height: height)
-            let shortCut = UIView(frame:CGRectMake(0, 0, 40, 40))
+            let shortCut = ChannelIconView(frame:CGRectMake(0, 0, 40, 40))
             shortCut.layer.cornerRadius = 2.5
             let image = UIImageView(frame:CGRectMake(0,0,shortCut.bounds.width, shortCut.bounds.height))
             let img = UIImage(named: "fox.png")
-//            image.image = img
-//            image.layer.cornerRadius = 2.5
-//            shortCut.addSubview(image)
-            let button = UIButton(frame:CGRectMake(0,0,shortCut.bounds.width,shortCut.bounds.height))
-            button.backgroundColor = UIColor.redColor()
-            shortCut.addSubview(button)
+            image.image = img
+            image.layer.cornerRadius = 2.5
+            shortCut.addSubview(image)
             shortCut.layer.position = CGPointMake(self.view.frame.width*((CGFloat(index)%3)+1)/4, self.view.frame.height*3/4 + 50*(CGFloat(index)/3))
             shortCut.tag = index
+            shortCut.movieName = channel.channelMovie
             icons.append(shortCut)
             index += 1
 //            self.view.addSubview(shortCut)
@@ -287,7 +221,12 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         if icons.last != nil {
             for icon in icons {
                 ///タップ処理
-                let dragGesture : UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: "dragged:")
+                let tapGesture : UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(TVViewController.tapped(_:)))
+                tapGesture.delegate = self
+                icon.addGestureRecognizer(tapGesture)
+                ///
+                ///パン処理
+                let dragGesture : UIPanGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(TVViewController.dragged(_:)))
                 dragGesture.delegate = self
                 icon.addGestureRecognizer(dragGesture)
                 ///
@@ -304,6 +243,16 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
                                   y:view.center.y + translation.y)
         }
         recognizer.setTranslation(CGPointZero, inView: self.view)
+    }
+    
+    func tapped(recognizer: UITapGestureRecognizer) {
+        pause()
+        self.currentVideoName = Channels.channels[(recognizer.view?.tag)!].channelMovie!
+        nowSelectedChannel = Channels.channels[(recognizer.view?.tag)!]
+        setVideo(currentVideoName)
+        
+        currentVideoTime = 0
+        play(currentVideoTime)
     }
     
 }

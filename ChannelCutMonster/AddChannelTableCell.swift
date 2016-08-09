@@ -30,7 +30,7 @@ class AddChannelTableCell : UITableViewCell {
         let url :String = channel.channelThumb!
         let imageData :NSData
         do {
-            if let imagePath : String = NSBundle.mainBundle().pathForResource("Resources"+url, ofType: "png") {
+            if let imagePath : String = NSBundle.mainBundle().pathForResource(url, ofType: "png") {
                 let fileHandle : NSFileHandle = NSFileHandle(forReadingAtPath: imagePath)!
                 imageData = fileHandle.readDataToEndOfFile()
                 let img = UIImage(data:imageData)

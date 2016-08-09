@@ -14,6 +14,7 @@ class ChannelInfo : NSObject,NSCoding {
     var channelName : String?
     var channelThumb : String?
     var channelDetail : String?
+    var channelMovie : String?
     var programs = [ProgramInfo]()
     
     //コンストラクタ

@@ -8,17 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		4B011D411D5709830026DD9F /* news1.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D401D5709830026DD9F /* news1.mp4 */; };
-		4B011D431D5709D40026DD9F /* channel1_programs.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D421D5709D40026DD9F /* channel1_programs.csv */; };
 		4B011D451D5740A10026DD9F /* settingButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D441D5740A10026DD9F /* settingButton.png */; };
 		4B011D491D577D2E0026DD9F /* channelPlusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D481D577D2E0026DD9F /* channelPlusButton.png */; };
 		4B011D4D1D57865F0026DD9F /* AddChannelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B011D4C1D57865F0026DD9F /* AddChannelViewController.swift */; };
 		4B011D4F1D57FE9E0026DD9F /* shortcut_icon-02.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D4E1D57FE9E0026DD9F /* shortcut_icon-02.png */; };
 		4B011D541D58522F0026DD9F /* AddChannelTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B011D531D58522F0026DD9F /* AddChannelTableCell.swift */; };
-		4B011D561D58685E0026DD9F /* Channels.csv in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D551D58685E0026DD9F /* Channels.csv */; };
 		4B011D581D5870B20026DD9F /* channels.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D571D5870B20026DD9F /* channels.plist */; };
 		4B011D5C1D5899700026DD9F /* back_return.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D5B1D5899700026DD9F /* back_return.png */; };
 		4B011D5E1D58E5AB0026DD9F /* fox.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D5D1D58E5AB0026DD9F /* fox.png */; };
 		4B011D621D5947530026DD9F /* ChannelIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B011D611D5947530026DD9F /* ChannelIconView.swift */; };
+		4B011D641D5994DB0026DD9F /* timeline.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D631D5994DB0026DD9F /* timeline.png */; };
+		4B011D661D59A83E0026DD9F /* tv.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D651D59A83E0026DD9F /* tv.png */; };
+		4B011D6A1D59AD390026DD9F /* akiba.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D671D59AD390026DD9F /* akiba.png */; };
+		4B011D6B1D59AD390026DD9F /* animax.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D681D59AD390026DD9F /* animax.png */; };
+		4B011D6C1D59AD390026DD9F /* annnews.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D691D59AD390026DD9F /* annnews.png */; };
+		4B011D6E1D59AD430026DD9F /* dance.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D6D1D59AD430026DD9F /* dance.png */; };
+		4B011D701D59AD4D0026DD9F /* nihoneiga.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D6F1D59AD4D0026DD9F /* nihoneiga.png */; };
+		4B011D721D59AD540026DD9F /* ziburi.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D711D59AD540026DD9F /* ziburi.png */; };
+		4B011D741D59BD6C0026DD9F /* ChannelTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B011D731D59BD6C0026DD9F /* ChannelTableViewCell.swift */; };
+		4B011D761D59C0050026DD9F /* TimeLineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B011D751D59C0050026DD9F /* TimeLineTableViewCell.swift */; };
+		4B011D781D59EDA70026DD9F /* akiba.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D771D59EDA70026DD9F /* akiba.mp4 */; };
+		4B011D7A1D59EDB20026DD9F /* fish.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D791D59EDB20026DD9F /* fish.mp4 */; };
+		4B011D7C1D59EDCF0026DD9F /* ojyaru.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D7B1D59EDCF0026DD9F /* ojyaru.mp4 */; };
+		4B011D7E1D59EDE90026DD9F /* syorin.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D7D1D59EDE90026DD9F /* syorin.mp4 */; };
+		4B011D801D59F40D0026DD9F /* buta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D7F1D59F40D0026DD9F /* buta.mp4 */; };
+		4B011D821D59F4F10026DD9F /* anime.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D811D59F4F10026DD9F /* anime.mp4 */; };
+		4B011D841D59F9640026DD9F /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B011D831D59F9640026DD9F /* ChannelManager.swift */; };
 		4B8996CC1D545F8500A139E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996CB1D545F8500A139E7 /* AppDelegate.swift */; };
 		4B8996CE1D545F8500A139E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996CD1D545F8500A139E7 /* ViewController.swift */; };
 		4B8996D11D545F8500A139E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996CF1D545F8500A139E7 /* Main.storyboard */; };
@@ -36,17 +51,32 @@
 
 /* Begin PBXFileReference section */
 		4B011D401D5709830026DD9F /* news1.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = news1.mp4; sourceTree = "<group>"; };
-		4B011D421D5709D40026DD9F /* channel1_programs.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = channel1_programs.csv; sourceTree = "<group>"; };
 		4B011D441D5740A10026DD9F /* settingButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settingButton.png; sourceTree = "<group>"; };
 		4B011D481D577D2E0026DD9F /* channelPlusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = channelPlusButton.png; sourceTree = "<group>"; };
 		4B011D4C1D57865F0026DD9F /* AddChannelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChannelViewController.swift; sourceTree = "<group>"; };
 		4B011D4E1D57FE9E0026DD9F /* shortcut_icon-02.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shortcut_icon-02.png"; sourceTree = "<group>"; };
 		4B011D531D58522F0026DD9F /* AddChannelTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddChannelTableCell.swift; sourceTree = "<group>"; };
-		4B011D551D58685E0026DD9F /* Channels.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Channels.csv; sourceTree = "<group>"; };
 		4B011D571D5870B20026DD9F /* channels.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = channels.plist; sourceTree = "<group>"; };
 		4B011D5B1D5899700026DD9F /* back_return.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = back_return.png; sourceTree = "<group>"; };
 		4B011D5D1D58E5AB0026DD9F /* fox.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fox.png; sourceTree = "<group>"; };
 		4B011D611D5947530026DD9F /* ChannelIconView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelIconView.swift; sourceTree = "<group>"; };
+		4B011D631D5994DB0026DD9F /* timeline.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = timeline.png; sourceTree = "<group>"; };
+		4B011D651D59A83E0026DD9F /* tv.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = tv.png; sourceTree = "<group>"; };
+		4B011D671D59AD390026DD9F /* akiba.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = akiba.png; sourceTree = "<group>"; };
+		4B011D681D59AD390026DD9F /* animax.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = animax.png; sourceTree = "<group>"; };
+		4B011D691D59AD390026DD9F /* annnews.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = annnews.png; sourceTree = "<group>"; };
+		4B011D6D1D59AD430026DD9F /* dance.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dance.png; sourceTree = "<group>"; };
+		4B011D6F1D59AD4D0026DD9F /* nihoneiga.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = nihoneiga.png; sourceTree = "<group>"; };
+		4B011D711D59AD540026DD9F /* ziburi.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ziburi.png; sourceTree = "<group>"; };
+		4B011D731D59BD6C0026DD9F /* ChannelTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelTableViewCell.swift; sourceTree = "<group>"; };
+		4B011D751D59C0050026DD9F /* TimeLineTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineTableViewCell.swift; sourceTree = "<group>"; };
+		4B011D771D59EDA70026DD9F /* akiba.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = akiba.mp4; sourceTree = "<group>"; };
+		4B011D791D59EDB20026DD9F /* fish.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = fish.mp4; sourceTree = "<group>"; };
+		4B011D7B1D59EDCF0026DD9F /* ojyaru.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = ojyaru.mp4; sourceTree = "<group>"; };
+		4B011D7D1D59EDE90026DD9F /* syorin.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = syorin.mp4; sourceTree = "<group>"; };
+		4B011D7F1D59F40D0026DD9F /* buta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = buta.mp4; sourceTree = "<group>"; };
+		4B011D811D59F4F10026DD9F /* anime.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = anime.mp4; sourceTree = "<group>"; };
+		4B011D831D59F9640026DD9F /* ChannelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
 		4B8996C81D545F8500A139E7 /* ChannelCutMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChannelCutMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8996CB1D545F8500A139E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B8996CD1D545F8500A139E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +181,7 @@
 			children = (
 				4B8996DD1D54637000A139E7 /* ChannelInfo.swift */,
 				4B8996DF1D54664500A139E7 /* ProgramInfo.swift */,
+				4B011D831D59F9640026DD9F /* ChannelManager.swift */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -161,6 +192,8 @@
 				4B8996E11D546CE800A139E7 /* AVPlayerView.swift */,
 				4B011D611D5947530026DD9F /* ChannelIconView.swift */,
 				4B011D531D58522F0026DD9F /* AddChannelTableCell.swift */,
+				4B011D731D59BD6C0026DD9F /* ChannelTableViewCell.swift */,
+				4B011D751D59C0050026DD9F /* TimeLineTableViewCell.swift */,
 			);
 			name = CustomViews;
 			sourceTree = "<group>";
@@ -168,16 +201,28 @@
 		4B8B7E041D54D4A900EE7D9D /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4B011D811D59F4F10026DD9F /* anime.mp4 */,
+				4B011D7F1D59F40D0026DD9F /* buta.mp4 */,
+				4B011D7D1D59EDE90026DD9F /* syorin.mp4 */,
+				4B011D7B1D59EDCF0026DD9F /* ojyaru.mp4 */,
+				4B011D791D59EDB20026DD9F /* fish.mp4 */,
+				4B011D771D59EDA70026DD9F /* akiba.mp4 */,
+				4B011D711D59AD540026DD9F /* ziburi.png */,
+				4B011D6F1D59AD4D0026DD9F /* nihoneiga.png */,
+				4B011D6D1D59AD430026DD9F /* dance.png */,
+				4B011D671D59AD390026DD9F /* akiba.png */,
+				4B011D681D59AD390026DD9F /* animax.png */,
+				4B011D691D59AD390026DD9F /* annnews.png */,
+				4B011D651D59A83E0026DD9F /* tv.png */,
+				4B011D631D5994DB0026DD9F /* timeline.png */,
 				4B011D5D1D58E5AB0026DD9F /* fox.png */,
 				4B011D5B1D5899700026DD9F /* back_return.png */,
 				4B011D571D5870B20026DD9F /* channels.plist */,
-				4B011D551D58685E0026DD9F /* Channels.csv */,
 				4B011D4E1D57FE9E0026DD9F /* shortcut_icon-02.png */,
 				4B011D4B1D57818B0026DD9F /* Channels */,
 				4B011D4A1D57817D0026DD9F /* Programs */,
 				4B011D481D577D2E0026DD9F /* channelPlusButton.png */,
 				4B011D441D5740A10026DD9F /* settingButton.png */,
-				4B011D421D5709D40026DD9F /* channel1_programs.csv */,
 				4B011D401D5709830026DD9F /* news1.mp4 */,
 				4B8B7E051D54D4A900EE7D9D /* background.jpg */,
 			);
@@ -263,18 +308,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4B011D661D59A83E0026DD9F /* tv.png in Resources */,
+				4B011D641D5994DB0026DD9F /* timeline.png in Resources */,
+				4B011D6B1D59AD390026DD9F /* animax.png in Resources */,
 				4B011D411D5709830026DD9F /* news1.mp4 in Resources */,
 				4B011D491D577D2E0026DD9F /* channelPlusButton.png in Resources */,
+				4B011D721D59AD540026DD9F /* ziburi.png in Resources */,
 				4B011D4F1D57FE9E0026DD9F /* shortcut_icon-02.png in Resources */,
 				4B011D5E1D58E5AB0026DD9F /* fox.png in Resources */,
 				4B011D581D5870B20026DD9F /* channels.plist in Resources */,
+				4B011D7C1D59EDCF0026DD9F /* ojyaru.mp4 in Resources */,
+				4B011D7E1D59EDE90026DD9F /* syorin.mp4 in Resources */,
+				4B011D6C1D59AD390026DD9F /* annnews.png in Resources */,
+				4B011D6E1D59AD430026DD9F /* dance.png in Resources */,
+				4B011D821D59F4F10026DD9F /* anime.mp4 in Resources */,
 				4B8996D61D545F8500A139E7 /* LaunchScreen.storyboard in Resources */,
+				4B011D6A1D59AD390026DD9F /* akiba.png in Resources */,
 				4B8B7E061D54D4A900EE7D9D /* background.jpg in Resources */,
 				4B8996D31D545F8500A139E7 /* Assets.xcassets in Resources */,
+				4B011D701D59AD4D0026DD9F /* nihoneiga.png in Resources */,
+				4B011D781D59EDA70026DD9F /* akiba.mp4 in Resources */,
+				4B011D801D59F40D0026DD9F /* buta.mp4 in Resources */,
 				4B011D5C1D5899700026DD9F /* back_return.png in Resources */,
-				4B011D431D5709D40026DD9F /* channel1_programs.csv in Resources */,
 				4B011D451D5740A10026DD9F /* settingButton.png in Resources */,
-				4B011D561D58685E0026DD9F /* Channels.csv in Resources */,
+				4B011D7A1D59EDB20026DD9F /* fish.mp4 in Resources */,
 				4B8996D11D545F8500A139E7 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -336,9 +393,12 @@
 			files = (
 				4B8996E91D547A5600A139E7 /* TVViewController.swift in Sources */,
 				4B8996E01D54664500A139E7 /* ProgramInfo.swift in Sources */,
+				4B011D761D59C0050026DD9F /* TimeLineTableViewCell.swift in Sources */,
 				4B8996CE1D545F8500A139E7 /* ViewController.swift in Sources */,
 				4B8996DE1D54637000A139E7 /* ChannelInfo.swift in Sources */,
+				4B011D841D59F9640026DD9F /* ChannelManager.swift in Sources */,
 				4B011D621D5947530026DD9F /* ChannelIconView.swift in Sources */,
+				4B011D741D59BD6C0026DD9F /* ChannelTableViewCell.swift in Sources */,
 				4B011D541D58522F0026DD9F /* AddChannelTableCell.swift in Sources */,
 				4B8996CC1D545F8500A139E7 /* AppDelegate.swift in Sources */,
 				4B8996EB1D547A6200A139E7 /* ListViewController.swift in Sources */,
