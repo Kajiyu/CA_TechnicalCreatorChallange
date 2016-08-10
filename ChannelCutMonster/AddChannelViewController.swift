@@ -29,6 +29,7 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
     
     
     var channels : [ChannelInfo] = [ChannelInfo]()
+    var favoriteChannels : [ChannelInfo] = [ChannelInfo]()
     var selectedChannel : ChannelInfo? = nil
     
     required init(coder aDecoder: NSCoder) {
@@ -156,10 +157,20 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
     }
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
-        selectedChannel = channels[indexPath.row]
-        currentVideoName = channels[indexPath.row].channelMovie!
-        currentVideoTime = 0
-        performSegueWithIdentifier("FromAddChannelToTVView", sender: nil)
+        var isAlready : Bool = false
+        for channel in self.favoriteChannels {
+            if(channels[indexPath.row].channelName == channel.channelName){
+                isAlready = true
+            }
+        }
+        if isAlready {
+            
+        } else {
+            selectedChannel = channels[indexPath.row]
+            currentVideoName = channels[indexPath.row].channelMovie!
+            currentVideoTime = 0
+            performSegueWithIdentifier("FromAddChannelToTVView", sender: nil)
+        }
     }
     
     

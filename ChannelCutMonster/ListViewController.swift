@@ -218,6 +218,8 @@ class ListViewController : UIViewController, UITableViewDelegate, UITableViewDat
     
     
     @IBAction func tapTVButton(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+        self.motionManager.stopDeviceMotionUpdates()
     }
     
     

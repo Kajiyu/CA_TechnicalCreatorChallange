@@ -20,12 +20,15 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A2z-9i-1FM">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="読むテレビ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-ag-eg6">
-                                        <rect key="frame" x="113" y="25" width="188" height="28"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="読むテレビ" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5N-ag-eg6">
+                                        <rect key="frame" x="93" y="35" width="185" height="28"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shortcut_icon-02.png" translatesAutoresizingMaskIntoConstraints="NO" id="MlA-05-Rxq">
+                                        <rect key="frame" x="43" y="35" width="29" height="28"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -95,7 +98,7 @@
                                     <outlet property="delegate" destination="g4A-Iy-hXm" id="x96-bf-vLj"/>
                                 </connections>
                             </tableView>
-                            <view alpha="0.60000002384185791" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEn-H9-uJQ">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QEn-H9-uJQ">
                                 <rect key="frame" x="0.0" y="383" width="321" height="185"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMV-sp-ZTv">
@@ -142,9 +145,6 @@
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="view2.png" translatesAutoresizingMaskIntoConstraints="NO" id="CnA-b8-9CU">
                                 <rect key="frame" x="-10" y="84" width="340" height="304"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="shortcut_icon-02.png" translatesAutoresizingMaskIntoConstraints="NO" id="MlA-05-Rxq">
-                                <rect key="frame" x="76" y="26" width="29" height="28"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -261,6 +261,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vac-fv-WOs">
                                         <rect key="frame" x="81" y="26" width="31" height="31"/>
                                         <state key="normal" backgroundImage="timeline.png"/>
+                                        <connections>
+                                            <action selector="goListButton:" destination="qzH-IP-qR6" eventType="touchUpInside" id="C9o-Kn-ypF"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -272,8 +275,11 @@
                                         <rect key="frame" x="22" y="209" width="273" height="157"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="view.png" translatesAutoresizingMaskIntoConstraints="NO" id="q3C-Tk-KGz">
+                                        <rect key="frame" x="-18" y="177" width="355" height="221"/>
+                                    </imageView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ikv-oj-qkN">
-                                        <rect key="frame" x="-1" y="177" width="321" height="17"/>
+                                        <rect key="frame" x="-1" y="171" width="321" height="23"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ozf-go-KZu">
@@ -305,9 +311,6 @@
                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="view.png" translatesAutoresizingMaskIntoConstraints="NO" id="q3C-Tk-KGz">
-                                        <rect key="frame" x="-18" y="177" width="355" height="221"/>
-                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -337,8 +340,6 @@
         <!--AddChannelViewController-->
         <scene sceneID="r6E-5g-GCU">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Lpv-97-Y92" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="9tK-xf-UEU" userLabel="Exit" sceneMemberID="exit"/>
                 <viewController title="AddChannelViewController" id="mc4-1Q-nHa" customClass="AddChannelViewController" customModule="ChannelCutMonster" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ANb-rb-AdY"/>
@@ -354,7 +355,7 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vlN-bc-8S2">
                                         <rect key="frame" x="0.0" y="357" width="320" height="211"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Setting" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6s-Ug-EdO">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Search" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G6s-Ug-EdO">
                                                 <rect key="frame" x="162" y="39" width="44" height="21"/>
                                                 <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="10"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -373,17 +374,14 @@
                                                     <segue destination="9tK-xf-UEU" kind="unwind" unwindAction="backFromAddChannelView:" id="Kxb-hS-ljq"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bqr-9V-UKF">
-                                                <rect key="frame" x="169" y="8" width="31" height="31"/>
-                                                <state key="normal" backgroundImage="settingButton.png"/>
-                                                <connections>
-                                                    <action selector="backTVView:" destination="mc4-1Q-nHa" eventType="touchUpInside" id="r8h-eu-3n1"/>
-                                                </connections>
-                                            </button>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hm0-Es-qaY" customClass="AVPlayerView" customModule="ChannelCutMonster" customModuleProvider="target">
                                                 <rect key="frame" x="37" y="71" width="246" height="122"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WSG-36-bEL">
+                                                <rect key="frame" x="169" y="9" width="30" height="30"/>
+                                                <state key="normal" backgroundImage="search.png"/>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -391,7 +389,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="357"/>
                                         <subviews>
                                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="4g9-y4-d0t">
-                                                <rect key="frame" x="0.0" y="76" width="320" height="261"/>
+                                                <rect key="frame" x="0.0" y="84" width="320" height="253"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                 <prototypes>
                                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddChannelTableCell" rowHeight="54" id="uUM-Tu-QcU" customClass="AddChannelTableCell" customModule="ChannelCutMonster" customModuleProvider="target">
@@ -420,7 +418,7 @@
                                                 </prototypes>
                                             </tableView>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="view2.png" translatesAutoresizingMaskIntoConstraints="NO" id="hGN-v0-Hqc">
-                                                <rect key="frame" x="-5" y="71" width="330" height="272"/>
+                                                <rect key="frame" x="-5" y="84" width="330" height="259"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" red="0.036260634816753901" green="0.036260634816753901" blue="0.036260634816753901" alpha="1" colorSpace="calibratedRGB"/>
@@ -429,7 +427,7 @@
                                 <color key="backgroundColor" red="0.0099641375319999993" green="0.022823952880000001" blue="0.014031010740000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Add Shortcut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA6-4i-fwN">
-                                <rect key="frame" x="59" y="20" width="201" height="36"/>
+                                <rect key="frame" x="59" y="21" width="201" height="36"/>
                                 <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -444,6 +442,8 @@
                         <segue destination="qzH-IP-qR6" kind="show" identifier="FromAddChannelToTVView" id="fYD-W1-918"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lpv-97-Y92" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="9tK-xf-UEU" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="805" y="-738"/>
         </scene>
@@ -451,6 +451,7 @@
     <resources>
         <image name="back_return.png" width="399" height="399"/>
         <image name="channelPlusButton.png" width="405" height="405"/>
+        <image name="search.png" width="256" height="256"/>
         <image name="settingButton.png" width="50" height="50"/>
         <image name="shortcut_icon-02.png" width="417" height="417"/>
         <image name="timeline.png" width="383" height="383"/>

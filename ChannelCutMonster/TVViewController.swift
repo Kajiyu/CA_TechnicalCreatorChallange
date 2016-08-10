@@ -73,7 +73,6 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         createShortCutIcon()
         manageTagValue()
         
-        
         ////傾き処理///
 //        motionManager.accelerometerUpdateInterval = 0.1
         motionManager.deviceMotionUpdateInterval = 0.3
@@ -87,7 +86,9 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         })
         ///////////////////
+        programTitleLabel.text = nowSelectedChannel!.programName
         channelThumb.image = UIImage(named: nowSelectedChannel!.channelThumb!)
+        channelDetailView.text = nowSelectedChannel!.programDetail
         channelDetailView.editable = false
     }
     
@@ -103,6 +104,10 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
                 self.motionManager.stopDeviceMotionUpdates()
             }
         })
+        programTitleLabel.text = nowSelectedChannel!.programName
+        channelThumb.image = UIImage(named: nowSelectedChannel!.channelThumb!)
+        channelDetailView.text = nowSelectedChannel!.programDetail
+        channelDetailView.editable = false
 //        play(currentVideoTime)
     }
     
@@ -119,6 +124,7 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
             let addChannelViewController : AddChannelViewController = segue.destinationViewController as! AddChannelViewController
             addChannelViewController.currentVideoTime = self.currentVideoTime
             addChannelViewController.currentVideoName = self.currentVideoName
+            addChannelViewController.favoriteChannels = self.favoriteChannels
         }
         
         if segue.identifier == "fromTVtoList" {
@@ -271,5 +277,13 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         currentVideoTime = 0
         play(currentVideoTime)
     }
+    
+    
+    @IBAction func goListButton(sender: AnyObject) {
+        self.performSegueWithIdentifier("fromTVtoList",sender: nil)
+        self.motionManager.stopDeviceMotionUpdates()
+    }
+    
+    
     
 }
