@@ -34,8 +34,11 @@
 		4B011D801D59F40D0026DD9F /* buta.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D7F1D59F40D0026DD9F /* buta.mp4 */; };
 		4B011D821D59F4F10026DD9F /* anime.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D811D59F4F10026DD9F /* anime.mp4 */; };
 		4B011D841D59F9640026DD9F /* ChannelManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B011D831D59F9640026DD9F /* ChannelManager.swift */; };
+		4B011D861D5A464F0026DD9F /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D851D5A464F0026DD9F /* title.png */; };
+		4B011D8C1D5ACC490026DD9F /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D8B1D5ACC490026DD9F /* view.png */; };
+		4B011D8E1D5AD4680026DD9F /* view2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D8D1D5AD4680026DD9F /* view2.png */; };
 		4B8996CC1D545F8500A139E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996CB1D545F8500A139E7 /* AppDelegate.swift */; };
-		4B8996CE1D545F8500A139E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996CD1D545F8500A139E7 /* ViewController.swift */; };
+		4B8996CE1D545F8500A139E7 /* InitializeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996CD1D545F8500A139E7 /* InitializeViewController.swift */; };
 		4B8996D11D545F8500A139E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996CF1D545F8500A139E7 /* Main.storyboard */; };
 		4B8996D31D545F8500A139E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996D21D545F8500A139E7 /* Assets.xcassets */; };
 		4B8996D61D545F8500A139E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996D41D545F8500A139E7 /* LaunchScreen.storyboard */; };
@@ -44,7 +47,6 @@
 		4B8996E21D546CE800A139E7 /* AVPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996E11D546CE800A139E7 /* AVPlayerView.swift */; };
 		4B8996E91D547A5600A139E7 /* TVViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996E81D547A5600A139E7 /* TVViewController.swift */; };
 		4B8996EB1D547A6200A139E7 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996EA1D547A6200A139E7 /* ListViewController.swift */; };
-		4B8996ED1D547AB200A139E7 /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996EC1D547AB200A139E7 /* TimeLineViewController.swift */; };
 		4B8B7E061D54D4A900EE7D9D /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 4B8B7E051D54D4A900EE7D9D /* background.jpg */; };
 		975AD933078BDB37323FE390 /* Pods_ChannelCutMonster.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B4E8F37B6CEC92E2D03B28E /* Pods_ChannelCutMonster.framework */; };
 /* End PBXBuildFile section */
@@ -77,9 +79,12 @@
 		4B011D7F1D59F40D0026DD9F /* buta.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = buta.mp4; sourceTree = "<group>"; };
 		4B011D811D59F4F10026DD9F /* anime.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = anime.mp4; sourceTree = "<group>"; };
 		4B011D831D59F9640026DD9F /* ChannelManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChannelManager.swift; sourceTree = "<group>"; };
+		4B011D851D5A464F0026DD9F /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
+		4B011D8B1D5ACC490026DD9F /* view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view.png; sourceTree = "<group>"; };
+		4B011D8D1D5AD4680026DD9F /* view2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view2.png; sourceTree = "<group>"; };
 		4B8996C81D545F8500A139E7 /* ChannelCutMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChannelCutMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8996CB1D545F8500A139E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4B8996CD1D545F8500A139E7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4B8996CD1D545F8500A139E7 /* InitializeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeViewController.swift; sourceTree = "<group>"; };
 		4B8996D01D545F8500A139E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4B8996D21D545F8500A139E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B8996D51D545F8500A139E7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -89,7 +94,6 @@
 		4B8996E11D546CE800A139E7 /* AVPlayerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVPlayerView.swift; sourceTree = "<group>"; };
 		4B8996E81D547A5600A139E7 /* TVViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TVViewController.swift; sourceTree = "<group>"; };
 		4B8996EA1D547A6200A139E7 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
-		4B8996EC1D547AB200A139E7 /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
 		4B8B7E051D54D4A900EE7D9D /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		8B4E8F37B6CEC92E2D03B28E /* Pods_ChannelCutMonster.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChannelCutMonster.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9ABCE17A9A6243C9831AC1D6 /* Pods-ChannelCutMonster.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChannelCutMonster.release.xcconfig"; path = "Pods/Target Support Files/Pods-ChannelCutMonster/Pods-ChannelCutMonster.release.xcconfig"; sourceTree = "<group>"; };
@@ -167,10 +171,9 @@
 		4B8996E31D54767200A139E7 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4B8996CD1D545F8500A139E7 /* ViewController.swift */,
+				4B8996CD1D545F8500A139E7 /* InitializeViewController.swift */,
 				4B8996E81D547A5600A139E7 /* TVViewController.swift */,
 				4B8996EA1D547A6200A139E7 /* ListViewController.swift */,
-				4B8996EC1D547AB200A139E7 /* TimeLineViewController.swift */,
 				4B011D4C1D57865F0026DD9F /* AddChannelViewController.swift */,
 			);
 			name = Controllers;
@@ -207,6 +210,8 @@
 				4B011D7B1D59EDCF0026DD9F /* ojyaru.mp4 */,
 				4B011D791D59EDB20026DD9F /* fish.mp4 */,
 				4B011D771D59EDA70026DD9F /* akiba.mp4 */,
+				4B011D401D5709830026DD9F /* news1.mp4 */,
+				4B011D851D5A464F0026DD9F /* title.png */,
 				4B011D711D59AD540026DD9F /* ziburi.png */,
 				4B011D6F1D59AD4D0026DD9F /* nihoneiga.png */,
 				4B011D6D1D59AD430026DD9F /* dance.png */,
@@ -218,12 +223,13 @@
 				4B011D5D1D58E5AB0026DD9F /* fox.png */,
 				4B011D5B1D5899700026DD9F /* back_return.png */,
 				4B011D571D5870B20026DD9F /* channels.plist */,
+				4B011D8B1D5ACC490026DD9F /* view.png */,
+				4B011D8D1D5AD4680026DD9F /* view2.png */,
 				4B011D4E1D57FE9E0026DD9F /* shortcut_icon-02.png */,
 				4B011D4B1D57818B0026DD9F /* Channels */,
 				4B011D4A1D57817D0026DD9F /* Programs */,
 				4B011D481D577D2E0026DD9F /* channelPlusButton.png */,
 				4B011D441D5740A10026DD9F /* settingButton.png */,
-				4B011D401D5709830026DD9F /* news1.mp4 */,
 				4B8B7E051D54D4A900EE7D9D /* background.jpg */,
 			);
 			path = Resources;
@@ -309,7 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B011D661D59A83E0026DD9F /* tv.png in Resources */,
+				4B011D8E1D5AD4680026DD9F /* view2.png in Resources */,
 				4B011D641D5994DB0026DD9F /* timeline.png in Resources */,
+				4B011D8C1D5ACC490026DD9F /* view.png in Resources */,
+				4B011D861D5A464F0026DD9F /* title.png in Resources */,
 				4B011D6B1D59AD390026DD9F /* animax.png in Resources */,
 				4B011D411D5709830026DD9F /* news1.mp4 in Resources */,
 				4B011D491D577D2E0026DD9F /* channelPlusButton.png in Resources */,
@@ -394,7 +403,7 @@
 				4B8996E91D547A5600A139E7 /* TVViewController.swift in Sources */,
 				4B8996E01D54664500A139E7 /* ProgramInfo.swift in Sources */,
 				4B011D761D59C0050026DD9F /* TimeLineTableViewCell.swift in Sources */,
-				4B8996CE1D545F8500A139E7 /* ViewController.swift in Sources */,
+				4B8996CE1D545F8500A139E7 /* InitializeViewController.swift in Sources */,
 				4B8996DE1D54637000A139E7 /* ChannelInfo.swift in Sources */,
 				4B011D841D59F9640026DD9F /* ChannelManager.swift in Sources */,
 				4B011D621D5947530026DD9F /* ChannelIconView.swift in Sources */,
@@ -404,7 +413,6 @@
 				4B8996EB1D547A6200A139E7 /* ListViewController.swift in Sources */,
 				4B8996E21D546CE800A139E7 /* AVPlayerView.swift in Sources */,
 				4B011D4D1D57865F0026DD9F /* AddChannelViewController.swift in Sources */,
-				4B8996ED1D547AB200A139E7 /* TimeLineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

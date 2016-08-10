@@ -18,7 +18,7 @@ class ChannelIconView: UIView {
     }
     */
     var movieName : String?
-    
+    var channelInfo : ChannelInfo?
     
     
     override func drawRect(rect: CGRect) {

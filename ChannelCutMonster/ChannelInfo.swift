@@ -15,7 +15,8 @@ class ChannelInfo : NSObject,NSCoding {
     var channelThumb : String?
     var channelDetail : String?
     var channelMovie : String?
-    var programs = [ProgramInfo]()
+    var programName : String?
+    var programDetail : String?
     
     //コンストラクタ
     init(_name : String, _thumb: String, _detail:String) {
@@ -35,6 +36,9 @@ class ChannelInfo : NSObject,NSCoding {
         aCoder.encodeObject(channelName, forKey: "name")
         aCoder.encodeObject(channelThumb, forKey:  "thumb")
         aCoder.encodeObject(channelDetail, forKey: "detail")
+        aCoder.encodeObject(channelMovie, forKey: "movie")
+        aCoder.encodeObject(programName, forKey: "programName")
+        aCoder.encodeObject(programDetail, forKey: "programDetail")
     }
     
     //デシリアライズ
@@ -43,6 +47,9 @@ class ChannelInfo : NSObject,NSCoding {
         self.channelName = coder.decodeObjectForKey("name") as! String
         self.channelThumb = coder.decodeObjectForKey("thumb") as! String
         self.channelDetail = coder.decodeObjectForKey("detail") as! String
+        self.channelMovie = coder.decodeObjectForKey("movie") as! String
+        self.programName = coder.decodeObjectForKey("programName") as! String
+        self.programDetail = coder.decodeObjectForKey("programDetail") as! String
     }
     
     ////////////////
@@ -82,15 +89,5 @@ class ChannelInfo : NSObject,NSCoding {
         }
     }
     ////////////////
-    
-    
-    func addProgram(_program : ProgramInfo)  {
-        programs.append(_program)
-    }
-    
-    func getProgram(index : Int) -> ProgramInfo {
-        return programs[index]
-    }
-    
-    
+
 }

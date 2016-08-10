@@ -62,8 +62,11 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if currentVideoName == "" {
-            currentVideoName = "news1"
+            nowSelectedChannel = Channels.channels[4]
+            print(nowSelectedChannel!.channelMovie!)
+            currentVideoName = nowSelectedChannel!.channelMovie!
         } else {
+            print(nowSelectedChannel!.channelMovie!)
         }
         setVideo(currentVideoName);
         play(currentVideoTime)
@@ -84,6 +87,8 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
             }
         })
         ///////////////////
+        channelThumb.image = UIImage(named: nowSelectedChannel!.channelThumb!)
+        channelDetailView.editable = false
     }
     
     override func viewWillAppear(animated: Bool) {
@@ -98,7 +103,7 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
                 self.motionManager.stopDeviceMotionUpdates()
             }
         })
-        play(currentVideoTime)
+//        play(currentVideoTime)
     }
     
     override func didReceiveMemoryWarning() {
@@ -117,9 +122,11 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         }
         
         if segue.identifier == "fromTVtoList" {
-            pause()
+//            pause()
             let listViewController : ListViewController = segue.destinationViewController as! ListViewController
             listViewController.currentVideoName = self.currentVideoName
+            listViewController.nowSelectedChannel = self.nowSelectedChannel
+            listViewController.favoriteChannels = self.favoriteChannels
         }
     }
     
@@ -170,9 +177,10 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func backFromAddChannelView(segue:UIStoryboardSegue){
         let addChannelViewController : AddChannelViewController = segue.sourceViewController as! AddChannelViewController
         addChannelViewController.pause()
-        self.currentVideoTime = addChannelViewController.currentVideoTime
+        self.currentVideoTime = 0
         self.currentVideoName = addChannelViewController.currentVideoName
-        play(currentVideoTime)
+        self.setVideo(currentVideoName)
+        self.play(currentVideoTime)
     }
     
     
@@ -191,6 +199,7 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
                 var channel : ChannelInfo
                 if data != nil {
                     channel = NSKeyedUnarchiver.unarchiveObjectWithData(data as! NSData) as! ChannelInfo
+                    print(channel.channelName)
                     favoriteChannels.append(channel)
                 }
             }
@@ -206,13 +215,16 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
             let shortCut = ChannelIconView(frame:CGRectMake(0, 0, 40, 40))
             shortCut.layer.cornerRadius = 2.5
             let image = UIImageView(frame:CGRectMake(0,0,shortCut.bounds.width, shortCut.bounds.height))
-            let img = UIImage(named: "fox.png")
+            let img = UIImage(named: channel.channelThumb!)
             image.image = img
             image.layer.cornerRadius = 2.5
             shortCut.addSubview(image)
-            shortCut.layer.position = CGPointMake(self.view.frame.width*((CGFloat(index)%3)+1)/4, self.view.frame.height*3/4 + 50*(CGFloat(index)/3))
+            shortCut.layer.position = CGPointMake(self.view.frame.width*((CGFloat(index)%5)+1)/6, self.view.frame.height*3/4 + 70)
             shortCut.tag = index
+            print(shortCut.tag)
+            print(channel.channelMovie)
             shortCut.movieName = channel.channelMovie
+            shortCut.channelInfo = channel
             icons.append(shortCut)
             index += 1
 //            self.view.addSubview(shortCut)
@@ -247,10 +259,15 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     
     func tapped(recognizer: UITapGestureRecognizer) {
         pause()
-        self.currentVideoName = Channels.channels[(recognizer.view?.tag)!].channelMovie!
-        nowSelectedChannel = Channels.channels[(recognizer.view?.tag)!]
+        print(recognizer.view!.tag)
+        let tmp_view : ChannelIconView = recognizer.view as! ChannelIconView
+        self.nowSelectedChannel! = tmp_view.channelInfo!
+        print(tmp_view.channelInfo?.channelName)
+        self.currentVideoName = tmp_view.movieName!
         setVideo(currentVideoName)
-        
+        programTitleLabel.text = nowSelectedChannel!.programName
+        channelDetailView.text = nowSelectedChannel!.programDetail
+        channelThumb.image = UIImage(named: nowSelectedChannel!.channelThumb!)
         currentVideoTime = 0
         play(currentVideoTime)
     }

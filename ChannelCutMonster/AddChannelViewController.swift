@@ -123,8 +123,12 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
                 let imgName : String = value.objectForKey("thumb") as! String
                 let detail : String = value.objectForKey("detail") as! String
                 let movie : String = value.objectForKey("movie") as! String
+                let programName : String = value.objectForKey("programName") as! String
+                let programDetail : String = value.objectForKey("programDetail") as! String
                 let tmp_channel = ChannelInfo(_name: name, _thumb: imgName, _detail: detail)
                 tmp_channel.channelMovie = movie
+                tmp_channel.programName = programName
+                tmp_channel.programDetail = programDetail
                 channels.append(tmp_channel)
                 count += 1
             } else {
@@ -143,6 +147,7 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
         let cell: AddChannelTableCell = tableView.dequeueReusableCellWithIdentifier("AddChannelTableCell", forIndexPath: indexPath) as! AddChannelTableCell
         cell.backgroundColor = UIColor.clearColor()
         cell.setCell(channels[indexPath.row])
+        print(channels[indexPath.row].channelMovie!)
         return cell
     }
     
@@ -152,6 +157,8 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
     
     func tableView(table: UITableView, didSelectRowAtIndexPath indexPath:NSIndexPath) {
         selectedChannel = channels[indexPath.row]
+        currentVideoName = channels[indexPath.row].channelMovie!
+        currentVideoTime = 0
         performSegueWithIdentifier("FromAddChannelToTVView", sender: nil)
     }
     

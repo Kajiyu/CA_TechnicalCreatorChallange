@@ -14,6 +14,10 @@
 		<string>ハリウッドメジャースタジオFOXがお贈りするハイビジョンの映画チャンネル。</string>
 		<key>movie</key>
 		<string>syorin</string>
+		<key>programName</key>
+		<string>少林サッカー</string>
+		<key>programDetail</key>
+		<string>2001年香港映画。香港で公開されるやあっという間に歴代興行成績No.１を記録した大ヒットアクションコメディ。くだらないが腹を抱えて笑えるギャグ、底辺から這い上がる人間ドラマ、ＣＧを効果的に使った演出、少林拳への情熱。何度も見返したくなる傑作映画。</string>
 	</dict>
 	<key>1</key>
 	<dict>
@@ -27,19 +31,27 @@
 		<string>「ジブリのあれこれをムービーでお届け！」のコンセプトはそのままに、パワーアップした「ジブリチャンネル」を楽しむことができます。</string>
 		<key>movie</key>
 		<string>buta</string>
+		<key>programName</key>
+		<string>紅の豚</string>
+		<key>programDetail</key>
+		<string>深紅の飛行艇を駆る豚のポルコは、かつてイタリア空軍のエースだったが、今はアドリア海の小島に隠棲し賞金稼ぎとして生業を立てている。ポルコが請け負うのは空中海賊（空賊）退治だ。マンマユート団たち空賊連合はいつも商売の邪魔をするポルコを目の敵にしている。</string>
 	</dict>
 	<key>2</key>
 	<dict>
 		<key>id</key>
 		<integer>2</integer>
 		<key>name</key>
-		<string>ダンスチャンネル</string>
+		<string>釣りチャンネル</string>
 		<key>thumb</key>
-		<string>dance</string>
+		<string>turi</string>
 		<key>detail</key>
-		<string>ストリート・キッズ・中学・高校ダンス部・チア・フラ・K-POP！ココロ踊る！日本初ダンス専門テレビ局</string>
+		<string>日本最大規模の釣り専門チャンネル。</string>
 		<key>movie</key>
 		<string>fish</string>
+		<key>programName</key>
+		<string>ブラックバスin北海道</string>
+		<key>programDetail</key>
+		<string>日本最高のアングラー、ミスターイシイが北海道の洞爺湖にごくまれに現れる、超巨大ブラックバスに挑む！</string>
 	</dict>
 	<key>3</key>
 	<dict>
@@ -53,6 +65,10 @@
 		<string>映画がもっと好きになる。最新作から不朽の名作まで日本映画の楽しさが全て勢揃い！</string>
 		<key>movie</key>
 		<string>ojyaru</string>
+		<key>programName</key>
+		<string>おじゃる丸</string>
+		<key>programDetail</key>
+		<string>現代の月光町に、千年前（平安時代）のヘイアンチョウ妖精界の貴族の子で、自称やんごとなき雅なお子様、おじゃる丸がやってきた。おじゃる丸は月光町の男の子カズマの家に居候を始める。</string>
 	</dict>
 	<key>4</key>
 	<dict>
@@ -66,6 +82,10 @@
 		<string>ANNが送る、高画質、わかりやすいニュースチャンネルです。隙間時間にどうぞ。</string>
 		<key>movie</key>
 		<string>news1</string>
+		<key>programName</key>
+		<string>ANNニュース</string>
+		<key>programDetail</key>
+		<string>ANNが送る、高画質、わかりやすいニュースチャンネルです。隙間時間にどうぞ。</string>
 	</dict>
 	<key>5</key>
 	<dict>
@@ -79,6 +99,10 @@
 		<string>あらゆるジャンルのアニメを24時間ノンストップで放送！アニメ見るならアニマックス。</string>
 		<key>movie</key>
 		<string>anime</string>
+		<key>programName</key>
+		<string>攻殻機動隊</string>
+		<key>programDetail</key>
+		<string>生身の人間、電脳化した人間、サイボーグ、アンドロイド、バイオロイドが混在する社会の中で、テロや暗殺、汚職などの犯罪を事前に察知してその被害を最小限に防ぐ内務省直属の攻性公安警察組織「公安9課」（通称「攻殻機動隊」）の活動を描いた物語。</string>
 	</dict>
 	<key>6</key>
 	<dict>
@@ -92,6 +116,10 @@
 		<string>最新アキバトレンドを、いち早くお届け！メイド喫茶から最新家電まで、幅広いラインナップをどうぞ！</string>
 		<key>movie</key>
 		<string>akiba</string>
+		<key>programName</key>
+		<string>アキバトレンディドットコム</string>
+		<key>programDetail</key>
+		<string>最新アキバトレンドを、いち早くお届け！メイド喫茶から最新家電まで、幅広いラインナップをどうぞ！</string>
 	</dict>
 </dict>
 </plist>
