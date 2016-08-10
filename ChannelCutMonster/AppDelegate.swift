@@ -19,6 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let userDefault = NSUserDefaults.standardUserDefaults()
         var appDomain:String = NSBundle.mainBundle().bundleIdentifier!
         NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
+        
+        
+        
+        userDefault.setObject(1, forKey:"favnum")
+        userDefault.synchronize()
+        
+        var Channels = ChannelManager.sharedManager
+        var channel : ChannelInfo = Channels.channels[0]
+        let sendData : NSData = NSKeyedArchiver.archivedDataWithRootObject(channel)
+        NSUserDefaults.standardUserDefaults().setObject(sendData as AnyObject, forKey: String(1))
+        NSUserDefaults.standardUserDefaults().synchronize()
         return true
     }
 

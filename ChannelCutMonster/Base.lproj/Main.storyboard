@@ -140,6 +140,9 @@
                                             <action selector="tapChannelButton:" destination="g4A-Iy-hXm" eventType="touchUpInside" id="9gK-Eg-IYe"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="right.png" translatesAutoresizingMaskIntoConstraints="NO" id="0FZ-RT-apC">
+                                        <rect key="frame" x="120" y="85" width="77" height="77"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -157,6 +160,7 @@
                         <outlet property="channelName" destination="m5N-ag-eg6" id="aHa-UK-Gps"/>
                         <outlet property="channelThumb" destination="MlA-05-Rxq" id="gjv-Cy-rdP"/>
                         <outlet property="channelsTable" destination="U1r-mp-L0m" id="OeS-IC-Di3"/>
+                        <outlet property="right" destination="0FZ-RT-apC" id="ofe-ip-we6"/>
                         <outlet property="timeTable" destination="L7m-2b-L3l" id="MLh-KL-dss"/>
                         <segue destination="qzH-IP-qR6" kind="presentation" identifier="fromListToTV" modalTransitionStyle="flipHorizontal" id="5NK-iU-BU7"/>
                     </connections>
@@ -265,6 +269,9 @@
                                             <action selector="goListButton:" destination="qzH-IP-qR6" eventType="touchUpInside" id="C9o-Kn-ypF"/>
                                         </connections>
                                     </button>
+                                    <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="left.png" translatesAutoresizingMaskIntoConstraints="NO" id="m8G-YX-bm3">
+                                        <rect key="frame" x="122" y="86" width="77" height="77"/>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
@@ -329,6 +336,7 @@
                         <outlet property="channelThumb" destination="BXR-Ok-sof" id="LFC-8U-lM5"/>
                         <outlet property="programTimeLabel" destination="ObX-l2-kb4" id="jEn-ga-9JU"/>
                         <outlet property="programTitleLabel" destination="fcn-L6-0gI" id="m5F-sb-uv5"/>
+                        <outlet property="right" destination="m8G-YX-bm3" id="ebK-E3-Jr7"/>
                         <outlet property="settingButton" destination="ysJ-bA-yoj" id="6GK-w1-4Pm"/>
                         <segue destination="g4A-Iy-hXm" kind="presentation" identifier="fromTVtoList" modalTransitionStyle="flipHorizontal" id="hUL-Mu-F38"/>
                     </connections>
@@ -427,8 +435,8 @@
                                 <color key="backgroundColor" red="0.0099641375319999993" green="0.022823952880000001" blue="0.014031010740000001" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" Add Shortcut" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dA6-4i-fwN">
-                                <rect key="frame" x="59" y="21" width="201" height="36"/>
-                                <fontDescription key="fontDescription" name="Avenir-MediumOblique" family="Avenir" pointSize="17"/>
+                                <rect key="frame" x="59" y="28" width="201" height="36"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -451,6 +459,8 @@
     <resources>
         <image name="back_return.png" width="399" height="399"/>
         <image name="channelPlusButton.png" width="405" height="405"/>
+        <image name="left.png" width="366" height="366"/>
+        <image name="right.png" width="366" height="366"/>
         <image name="search.png" width="256" height="256"/>
         <image name="settingButton.png" width="50" height="50"/>
         <image name="shortcut_icon-02.png" width="417" height="417"/>

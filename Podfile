@@ -6,6 +6,7 @@ target 'ChannelCutMonster' do
   use_frameworks!
 pod 'RxSwift'
 pod 'RxCocoa'
+pod 'SCLAlertView'
   # Pods for ChannelCutMonster
 
 end

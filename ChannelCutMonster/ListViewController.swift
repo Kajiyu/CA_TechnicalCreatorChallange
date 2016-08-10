@@ -13,6 +13,7 @@ import CoreMotion
 
 class ListViewController : UIViewController, UITableViewDelegate, UITableViewDataSource, UIGestureRecognizerDelegate {
     
+    @IBOutlet weak var right: UIImageView!
     @IBOutlet weak var channelsTable: UITableView!
     @IBOutlet weak var timeTable: UITableView!
     
@@ -56,6 +57,13 @@ class ListViewController : UIViewController, UITableViewDelegate, UITableViewDat
             self.channelName.text = self.listSelectedChannel!.channelName
             self.channelThumb.image = UIImage(named: self.listSelectedChannel!.channelThumb!)
             let attitude: CMAttitude = deviceManager!.attitude
+            
+            if(attitude.roll > 0){
+                self.right.alpha = (  CGFloat(attitude.roll)*10)/6
+            } else {
+                self.right.alpha = 0
+            }
+            
             if attitude.roll*10 > 6 {
 //                self.performSegueWithIdentifier("fromListToTV",sender: nil)
                 self.dismissViewControllerAnimated(true, completion: nil)
@@ -120,8 +128,8 @@ class ListViewController : UIViewController, UITableViewDelegate, UITableViewDat
             return cell
         } else {
             let cell : ChannelTableViewCell = tableView.dequeueReusableCellWithIdentifier("channelTableViewCell", forIndexPath: indexPath) as! ChannelTableViewCell
-            let detail : String = "Method 1 gave you the components, but it would be a lot of work to format those numbers for every style, language, and region."
-            let title : String = "kakakkakkkakakak"
+            let detail : String = nowSelectedChannel!.programDetail!
+            let title : String = nowSelectedChannel!.programName!
             cell.setCell(title, _detail: detail)
             cell.backgroundColor = UIColor.clearColor()
             return cell

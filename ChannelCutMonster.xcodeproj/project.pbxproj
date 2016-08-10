@@ -37,6 +37,9 @@
 		4B011D861D5A464F0026DD9F /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D851D5A464F0026DD9F /* title.png */; };
 		4B011D8C1D5ACC490026DD9F /* view.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D8B1D5ACC490026DD9F /* view.png */; };
 		4B011D8E1D5AD4680026DD9F /* view2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B011D8D1D5AD4680026DD9F /* view2.png */; };
+		4B0641CC1D5B00B100A96630 /* fish.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0641CB1D5B00B100A96630 /* fish.png */; };
+		4B0641CE1D5B039000A96630 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0641CD1D5B039000A96630 /* right.png */; };
+		4B0641D01D5B039E00A96630 /* left.png in Resources */ = {isa = PBXBuildFile; fileRef = 4B0641CF1D5B039E00A96630 /* left.png */; };
 		4B8996CC1D545F8500A139E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996CB1D545F8500A139E7 /* AppDelegate.swift */; };
 		4B8996CE1D545F8500A139E7 /* InitializeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B8996CD1D545F8500A139E7 /* InitializeViewController.swift */; };
 		4B8996D11D545F8500A139E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4B8996CF1D545F8500A139E7 /* Main.storyboard */; };
@@ -83,6 +86,9 @@
 		4B011D851D5A464F0026DD9F /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
 		4B011D8B1D5ACC490026DD9F /* view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view.png; sourceTree = "<group>"; };
 		4B011D8D1D5AD4680026DD9F /* view2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = view2.png; sourceTree = "<group>"; };
+		4B0641CB1D5B00B100A96630 /* fish.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fish.png; sourceTree = "<group>"; };
+		4B0641CD1D5B039000A96630 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = right.png; sourceTree = "<group>"; };
+		4B0641CF1D5B039E00A96630 /* left.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = left.png; sourceTree = "<group>"; };
 		4B8996C81D545F8500A139E7 /* ChannelCutMonster.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChannelCutMonster.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B8996CB1D545F8500A139E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4B8996CD1D545F8500A139E7 /* InitializeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializeViewController.swift; sourceTree = "<group>"; };
@@ -117,6 +123,8 @@
 		4B011D4A1D57817D0026DD9F /* Programs */ = {
 			isa = PBXGroup;
 			children = (
+				4B0641CF1D5B039E00A96630 /* left.png */,
+				4B0641CD1D5B039000A96630 /* right.png */,
 			);
 			name = Programs;
 			sourceTree = "<group>";
@@ -213,6 +221,7 @@
 				4B011D791D59EDB20026DD9F /* fish.mp4 */,
 				4B011D771D59EDA70026DD9F /* akiba.mp4 */,
 				4B011D401D5709830026DD9F /* news1.mp4 */,
+				4B0641CB1D5B00B100A96630 /* fish.png */,
 				4B011D851D5A464F0026DD9F /* title.png */,
 				4B011D711D59AD540026DD9F /* ziburi.png */,
 				4B011D6F1D59AD4D0026DD9F /* nihoneiga.png */,
@@ -323,11 +332,14 @@
 				4B9554741D5AE94C00851693 /* search.png in Resources */,
 				4B011D8C1D5ACC490026DD9F /* view.png in Resources */,
 				4B011D861D5A464F0026DD9F /* title.png in Resources */,
+				4B0641D01D5B039E00A96630 /* left.png in Resources */,
 				4B011D6B1D59AD390026DD9F /* animax.png in Resources */,
 				4B011D411D5709830026DD9F /* news1.mp4 in Resources */,
 				4B011D491D577D2E0026DD9F /* channelPlusButton.png in Resources */,
+				4B0641CE1D5B039000A96630 /* right.png in Resources */,
 				4B011D721D59AD540026DD9F /* ziburi.png in Resources */,
 				4B011D4F1D57FE9E0026DD9F /* shortcut_icon-02.png in Resources */,
+				4B0641CC1D5B00B100A96630 /* fish.png in Resources */,
 				4B011D5E1D58E5AB0026DD9F /* fox.png in Resources */,
 				4B011D581D5870B20026DD9F /* channels.plist in Resources */,
 				4B011D7C1D59EDCF0026DD9F /* ojyaru.mp4 in Resources */,

@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import AVFoundation
+import SCLAlertView
 
 
 class AddChannelViewController : UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -164,11 +165,10 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
             }
         }
         if isAlready {
-            
+            SCLAlertView().showWarning("Alert", subTitle: "このチャンネルは既に追加済みです。")
         } else {
             selectedChannel = channels[indexPath.row]
             currentVideoName = channels[indexPath.row].channelMovie!
-            currentVideoTime = 0
             performSegueWithIdentifier("FromAddChannelToTVView", sender: nil)
         }
     }
@@ -186,6 +186,7 @@ class AddChannelViewController : UIViewController, UITableViewDataSource, UITabl
                     let sendData : NSData = NSKeyedArchiver.archivedDataWithRootObject(selectedChannel!)
                     NSUserDefaults.standardUserDefaults().setObject(sendData as AnyObject, forKey: String(favChannelNum+1))
                     NSUserDefaults.standardUserDefaults().synchronize()
+                    currentVideoTime = 0
                     defaults.setObject(favChannelNum+1, forKey: "favnum")
                     defaults.synchronize()
                 } else {

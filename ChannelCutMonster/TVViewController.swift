@@ -10,6 +10,7 @@ import UIKit
 import AVFoundation
 import CoreMedia
 import CoreMotion
+import SCLAlertView
 
 class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     
@@ -17,6 +18,7 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBOutlet weak var channelThumb: UIImageView!
     @IBOutlet weak var programTimeLabel: UILabel!
     @IBOutlet weak var programTitleLabel: UILabel!
+    @IBOutlet weak var right: UIImageView!
     
     @IBOutlet weak var backgroundImage: UIImageView!
     
@@ -62,7 +64,7 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         if currentVideoName == "" {
-            nowSelectedChannel = Channels.channels[4]
+            nowSelectedChannel = Channels.channels[0]
             print(nowSelectedChannel!.channelMovie!)
             currentVideoName = nowSelectedChannel!.channelMovie!
         } else {
@@ -80,6 +82,11 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
             deviceManager, error in
             
             var attitude: CMAttitude = deviceManager!.attitude
+            if(attitude.roll < 0){
+                self.right.alpha = (  CGFloat((-1)*attitude.roll)*10)/6
+            } else {
+                self.right.alpha = 0
+            }
             if attitude.roll*10 < -6 {
                 self.performSegueWithIdentifier("fromTVtoList",sender: nil)
                 self.motionManager.stopDeviceMotionUpdates()
@@ -99,6 +106,11 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
             deviceManager, error in
             
             var attitude: CMAttitude = deviceManager!.attitude
+            if(attitude.roll < 0){
+                self.right.alpha = (  CGFloat((-1)*attitude.roll)*10)/6
+            } else {
+                self.right.alpha = 0
+            }
             if attitude.roll*10 < -6 {
                 self.performSegueWithIdentifier("fromTVtoList",sender: nil)
                 self.motionManager.stopDeviceMotionUpdates()
@@ -183,7 +195,7 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
     @IBAction func backFromAddChannelView(segue:UIStoryboardSegue){
         let addChannelViewController : AddChannelViewController = segue.sourceViewController as! AddChannelViewController
         addChannelViewController.pause()
-        self.currentVideoTime = 0
+//        self.currentVideoTime = 0
         self.currentVideoName = addChannelViewController.currentVideoName
         self.setVideo(currentVideoName)
         self.play(currentVideoTime)
@@ -248,6 +260,11 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
                 dragGesture.delegate = self
                 icon.addGestureRecognizer(dragGesture)
                 ///
+                ///ロングタップ処理
+                let longGesture : UILongPressGestureRecognizer = UILongPressGestureRecognizer(target: self, action: #selector(TVViewController.longPressed(_:)))
+                longGesture.delegate = self
+                icon.addGestureRecognizer(longGesture)
+                ///
                 self.view.addSubview(icon)
             }
         }
@@ -276,6 +293,61 @@ class TVViewController: UIViewController, UIGestureRecognizerDelegate {
         channelThumb.image = UIImage(named: nowSelectedChannel!.channelThumb!)
         currentVideoTime = 0
         play(currentVideoTime)
+    }
+    
+    func longPressed(recognizer: UILongPressGestureRecognizer) {
+        switch recognizer.state {
+        case .Began:
+            print(self.favoriteChannels.count)
+            let alertView = SCLAlertView()
+            alertView.addButton("OK") {
+                let tmp_view : ChannelIconView = recognizer.view as! ChannelIconView
+                //            let viewtag : Int = recognizer.view!.tag
+                let c_name : String = tmp_view.channelInfo!.channelName!
+                if self.nowSelectedChannel!.channelName == tmp_view.channelInfo!.channelName {
+//                    self.pause()
+//                    tmp_view.removeFromSuperview()
+//                    var _index : Int = 0
+//                    for channel in self.favoriteChannels {
+//                        if channel.channelName == c_name {
+//                            self.favoriteChannels.removeAtIndex(_index)
+//                            break
+//                        }
+//                        _index += 1
+//                    }
+//                    print(self.favoriteChannels.count)
+//                    self.nowSelectedChannel = self.favoriteChannels[1]
+//                    self.currentVideoName = self.nowSelectedChannel!.channelName!
+//                    self.currentVideoTime = 0
+//                    self.play(self.currentVideoTime)
+                    //苦肉の索
+                    SCLAlertView().showError("Error", subTitle: "別のチャンネルに切換えてから削除してください><")
+                } else {
+                    tmp_view.removeFromSuperview()
+                    var _index : Int = 0
+                    for channel in self.favoriteChannels {
+                        if channel.channelName == c_name {
+                            self.favoriteChannels.removeAtIndex(_index)
+                            break
+                        }
+                        _index += 1
+                    }
+                }
+            }
+            alertView.showTitle(
+                "Warning", // タイトル
+                subTitle: "チャンネルを削除しますか？", // サブタイトル
+                duration: 400, // 2.0秒ごに、自動的に閉じる（OKでも閉じることはできる）
+                completeText: "Cancel", // クローズボタンのタイトル
+                style: .Warning, // スタイル（Success)指定
+                colorStyle: 0xFFFF00, // ボタン、シンボルの色
+                colorTextButton: 0x000000 // ボタンの文字列の色0x000088
+            )
+        default:
+            return
+        }
+        
+        
     }
     
     
